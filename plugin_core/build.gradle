@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace "com.android.systemui.plugin_core"
     compileSdk COMPILE_SDK.toInteger()
 
     defaultConfig {

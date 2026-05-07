@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
+    namespace "com.android.wm.shell"
     compileSdk COMPILE_SDK.toInteger()
 
     defaultConfig {
@@ -31,6 +32,7 @@ android {
 
     buildFeatures {
         buildConfig = false
+        aidl = true
     }
 
     kotlinOptions {

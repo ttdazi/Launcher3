@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+    namespace "com.android.launcher3"
     compileSdk COMPILE_SDK.toInteger()
 
     defaultConfig {
@@ -46,6 +47,14 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     // The flavor dimensions for build variants (e.g. aospWithQuickstep, aospWithoutQuickstep)
@@ -157,6 +166,7 @@ dependencies {
 
     implementation(':dynamicanimation-1.1.0-alpha04@aar')
     implementation libs.preference
+    implementation libs.appcompat
     implementation libs.constraintlayout
     implementation libs.slice.core
     implementation libs.recyclerview

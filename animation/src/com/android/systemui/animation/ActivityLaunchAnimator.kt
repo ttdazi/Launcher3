@@ -271,18 +271,15 @@ class ActivityLaunchAnimator(
 
     interface Listener {
         /** Called when an activity launch animation started. */
-        @JvmDefault
         fun onLaunchAnimationStart() {}
 
         /**
          * Called when an activity launch animation is finished. This will be called if and only if
          * [onLaunchAnimationStart] was called earlier.
          */
-        @JvmDefault
         fun onLaunchAnimationEnd() {}
 
         /** Called when an activity launch animation made progress. */
-        @JvmDefault
         fun onLaunchAnimationProgress(linearProgress: Float) {}
     }
 
